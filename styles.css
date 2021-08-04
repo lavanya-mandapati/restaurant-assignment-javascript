@@ -1,0 +1,128 @@
+.container {
+  display:flex;
+}
+* {
+  box-sizing: border-box;
+  }
+
+
+input[type=text] {
+  width: 220px;
+  box-sizing: border-box;
+  border: 2px;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+  
+input[type=text]:focus {
+  width: 100%;
+}
+
+h4,h2{
+  font-size: medium;
+  font-style: normal;
+  text-align: center;
+}
+.item{
+  border-radius: 5px;
+  margin: 30px 30px 30px 10px;
+  padding: 20px 30px;
+  height: 80px;
+  min-width: 50%;
+  cursor: move;
+  font-size: 20px;
+  border: 1px solid blue;
+  border-collapse: collapse;
+}
+
+.tableitem{
+  border-radius: 5px;
+  margin: 30px 30px 30px 10px;
+  padding: 20px 30px;
+  height: auto;
+  width: auto;
+  cursor: default;
+  border: 1px solid blue;
+  font-size: 20px;
+  border-collapse: collapse;
+}
+
+:root {
+  --modal-duration: 1s;
+  --modal-color: #428bca;
+}
+
+.modal {
+  margin:auto;
+  display: none;
+  position:fixed;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  overflow: auto;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #000;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  float: center;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #bbb;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #bbb;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: auto;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
